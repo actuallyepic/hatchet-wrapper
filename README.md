@@ -11,7 +11,6 @@ const getBoardStep = new StepBuilder('get-board')
         console.log("Getting board for organization", inputs.organizationId);
         return { data: { board: { id: "board-123" } } };
     })
-    .build();
 
 const processBoard = new StepBuilder('process-board')
     .addInput('organizationId', z.string())
@@ -20,7 +19,6 @@ const processBoard = new StepBuilder('process-board')
         console.log("Processing board", inputs);
         return { result: true };
     })
-    .build();
 
 const runAi = new StepBuilder('run-ai')
     .addInput('prompt', z.string())
@@ -29,7 +27,6 @@ const runAi = new StepBuilder('run-ai')
         console.log("Running AI", inputs);
         return { result: "success!" };
     })
-    .build();
 
 ```
 
